@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ParkFinder</string>
+
+    <string name="south_rose_hill_park">South Rose Hill Park</string>
+    <string name="kirkland_wa">Kirkland, WA</string>
+    <string name="navigate_abbr">Nav</string>
+</resources>
