@@ -1,7 +1,59 @@
 <resources>
-    <string name="app_name">ParkFinder</string>
+    <string name="app_name">Park Finder</string>
+    <string name="view_park_name">View Park</string>
 
-    <string name="south_rose_hill_park">South Rose Hill Park</string>
-    <string name="kirkland_wa">Kirkland, WA</string>
     <string name="navigate_abbr">Nav</string>
+
+    <!-- Defaults for Google Maps setup -->
+    <string name="default_google_maps_zoom">12.0</string>
+    <string name="default_google_maps_tilt">0.0</string>
+    <string name="default_google_maps_bearing">0.0</string>
+
+    <!-- South Rose Hill Park -->
+    <string name="name_south_rose_hill_park">South Rose Hill Park</string>
+    <string name="description_south_rose_hill_park">Description of South Rose Hill Park</string>
+    <string name="latitude_south_rose_hill_park">47.6688893</string>
+    <string name="longitude_south_rose_hill_park">-122.169511</string>
+    <string name="hours_south_rose_hill_park">Open from 8:00 am until dusk.</string>
+    <string name="amenities_south_rose_hill_park">Public Restrooms</string>
+    <string name="equip_south_rose_hill_park">Suitable for small children and toddlers</string>
+    <string name="warning_south_rose_hill_park">BEARS!</string>
+
+    <!-- North Rose Hill Park -->
+    <string name="name_north_rose_hill_park">North Rose Hill Park</string>
+    <string name="description_north_rose_hill_park">Description of North Rose Hill Park</string>
+    <string name="latitude_north_rose_hill_park">47.6688893</string>
+    <string name="longitude_north_rose_hill_park">-122.169511</string>
+    <string name="hours_north_rose_hill_park">Open from 8:00 am until dusk.</string>
+    <string name="amenities_north_rose_hill_park">Public Restrooms</string>
+    <string name="equip_north_rose_hill_park">Suitable for small children and toddlers</string>
+
+    <!-- Peter Kirk Park -->
+    <string name="name_peter_kirk_park">Peter Kirk Park</string>
+    <string name="description_peter_kirk_park">Description of Peter Kirk Park</string>
+    <string name="latitude_peter_kirk_park">47.6688893</string>
+    <string name="longitude_peter_kirk_park">-122.169511</string>
+    <string name="hours_peter_kirk_park">Open from 8:00 am until dusk.</string>
+    <string name="amenities_peter_kirk_park">Public Restrooms</string>
+    <string name="equip_peter_kirk_park">Public pool, skate park, and baseball field</string>
+    <string name="warning_peter_kirk_park">Watch out for fly balls</string>
+
+    <!-- Terrace Park -->
+    <string name="name_terrace_park">Terrace Park</string>
+    <string name="description_terrace_park">Description of Terrace Park</string>
+    <string name="latitude_terrace_park">47.6688893</string>
+    <string name="longitude_terrace_park">-122.169511</string>
+    <string name="hours_terrace_park">Open from 8:00 am until dusk.</string>
+    <string name="equip_terrace_park">Swingset and small playset</string>
+
+    <!-- Grass Lawn Park -->
+    <string name="name_grass_lawn_park">Grass Lawn Park</string>
+    <string name="description_grass_lawn_park">Description of Grass Lawn Park</string>
+    <string name="latitude_grass_lawn_park">47.6688893</string>
+    <string name="longitude_grass_lawn_park">-122.169511</string>
+    <string name="hours_grass_lawn_park">Open from 8:00 am until dusk.</string>
+    <string name="amenities_grass_lawn_park">Public Restrooms</string>
+    <string name="equip_grass_lawn_park">Multiple playgrounds, soccer fields, baseball field</string>
+    <string name="warning_grass_lawn_park">Can be extremely crowded at times</string>
+
 </resources>

@@ -1,43 +1,25 @@
 package com.example.android.parkfinder;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-public class MainActivity extends AppCompatActivity
-        implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity {
+    private Park park;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        ParkRetriever parkRetriever = new ParkRetriever(this);
+        park = parkRetriever.getSouthRoseHillPark();
     }
 
-    @Override
-    public void onMapReady(GoogleMap map) {
-        LatLng loc = new LatLng(47.6688893, -122.169511);
-
-        map.addMarker(new MarkerOptions()
-                .position(loc)
-                .title("South Rose Hill Park"));
-
-        float zoom = 12.0f;
-        float tilt = 0.0f;
-        float bearing = 0.0f;
-        CameraPosition pos = new CameraPosition(loc, zoom, tilt, bearing);
-        CameraUpdate update = CameraUpdateFactory.newCameraPosition(pos);
-        map.moveCamera(update);
+    public void viewPark(View view) {
+        Intent intent = new Intent(this, ViewParkActivity.class);
+        intent.putExtra(IntentExtras.EXTRA_PARK, park);
+        startActivity(intent);
     }
 }

@@ -11,4 +11,5 @@
     <color name="colorButtonPrimaryClicked">#F06292</color>
 
     <color name="colorInfoIcon">@android:color/white</color>
+    <color name="colorWarningInfoIcon">@android:color/holo_red_light</color>
 </resources>
