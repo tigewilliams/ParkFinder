@@ -132,9 +132,16 @@ public class ViewParkActivity extends AppCompatActivity
 
     @Override
     public void onMapReady(GoogleMap map) {
+        // Locking down the map so that it doesn't accept
+        // gestures.  This is because it has strange behavior
+        // inside of a scrollview.  The user can always
+        // click on the marker and choose to open Google Maps
+        map.getUiSettings().setAllGesturesEnabled(false);
+
         addParkMapMarker(park, map);
         zoomMapToPark(park, map);
     }
+
 
     private void addParkMapMarker(Park park, GoogleMap map) {
         // add a marker on the location of the park
