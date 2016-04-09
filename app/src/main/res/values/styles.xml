@@ -9,6 +9,15 @@
         <item name="android:colorBackground">@color/colorBackground</item>
     </style>
 
+    <style name="horizontalDivider">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorDivider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/divider_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/divider_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/divider_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/divider_vertical_margin</item>
+    </style>
 
     <style name="ParkImageStyle">
         <item name="android:layout_width">match_parent</item>
@@ -31,7 +40,10 @@
         <item name="android:layout_marginLeft">@dimen/card_horizontal_margin</item>
         <item name="android:layout_marginRight">@dimen/card_horizontal_margin</item>
         <item name="android:layout_marginBottom">@dimen/card_vertical_margin</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
         <item name="android:background">@color/colorTextAreaBackground</item>
         <item name="android:textColor">@color/colorTextArea</item>
     </style>
@@ -46,9 +58,7 @@
 
     <style name="ParkMapStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_marginLeft">@dimen/card_horizontal_margin</item>
-        <item name="android:layout_marginRight">@dimen/card_horizontal_margin</item>
-        <item name="android:layout_marginBottom">@dimen/card_vertical_margin</item>
+        <item name="android:layout_margin">@dimen/card_horizontal_margin</item>
         <item name="android:layout_height">200dp</item>
     </style>
 
@@ -70,9 +80,9 @@
 
     <style name="ParkCardNameStyle">
         <item name="android:textColor">@color/colorText</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>

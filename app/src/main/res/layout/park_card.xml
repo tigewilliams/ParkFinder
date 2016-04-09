@@ -13,14 +13,14 @@
         <ImageView
             android:id="@+id/parkCardImage"
             style="@style/ParkCardImageStyle"
-            tools:src="@drawable/south_rose_hill_kirkland_1" />
+            tools:src="@drawable/south_rose_hill_1" />
 
         <TextView
             android:id="@+id/parkCardName"
             style="@style/ParkCardNameStyle"
             android:layout_toRightOf="@id/parkCardImage"
             android:layout_alignTop="@id/parkCardImage"
-            tools:text="South Rose Hill Park" />
+            tools:text="North Rose Hill Woodlands Park" />
 
         <LinearLayout
             android:id="@+id/parkCardFeatures"
@@ -40,7 +40,7 @@
             android:layout_alignStart="@+id/parkCardFeatures"
             android:numStars="5"
             tools:rating="4.1"
-            style="@android:style/Widget.Material.RatingBar.Small" />
+            style="@android:style/Widget.DeviceDefault.RatingBar.Small" />
 
         <LinearLayout
             android:id="@+id/parkCardPopulation"

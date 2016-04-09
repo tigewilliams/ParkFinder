@@ -51,9 +51,9 @@ public class ParkRetriever {
         float lng = Float.parseFloat(longitude);
         park.setLocation(new LatLng(lat, lng));
 
-        park.addImageResource(R.drawable.south_rose_hill_1);
-        park.addImageResource(R.drawable.south_rose_hill_2);
         park.addImageResource(R.drawable.south_rose_hill_3);
+        park.addImageResource(R.drawable.south_rose_hill_2);
+        park.addImageResource(R.drawable.south_rose_hill_1);
 
         String hours = getResourceString(R.string.hours_south_rose_hill_park);
         park.addInfoItem(new InfoItem(InfoTypes.HOURS, hours));

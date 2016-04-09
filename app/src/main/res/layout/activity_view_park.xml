@@ -49,11 +49,15 @@
 
             </RelativeLayout>
 
+            <View style="@style/horizontalDivider" />
+
             <!-- Description -->
             <TextView
                 android:id="@+id/parkDescription"
                 style="@style/ParkDescriptionStyle"
                 tools:text="This is a description of the park and what all it has in it and is a really long text line !" />
+
+            <View style="@style/horizontalDivider" />
 
             <!-- Map View -->
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"

@@ -3,22 +3,24 @@
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#1B5E20</color>
     <color name="colorAccent">#00E676</color>
-    <color name="colorBackground">#81C784</color>
-    <color name="colorCardBackground">#1B5E20</color>
+    <color name="colorBackground">#BDBDBD</color>
+    <color name="colorCardBackground">#FAFAFA</color>
+
+    <color name="colorDivider">#BDBDBD</color>
 
     <color name="colorButtonPrimary">#E91E63</color>
     <color name="colorButtonPrimaryFocused">#F06292</color>
     <color name="colorButtonPrimaryClicked">#F06292</color>
 
-    <color name="colorText">@android:color/white</color>
-    <color name="colorTextArea">@android:color/black</color>
-    <color name="colorTextAreaBackground">@android:color/white</color>
-    <color name="colorInfoText">@android:color/white</color>
-    <color name="colorInfoIcon">@android:color/white</color>
+    <color name="colorText">#212121</color>
+    <color name="colorTextArea">#212121</color>
+    <color name="colorTextAreaBackground">#FAFAFA</color>
+    <color name="colorInfoText">#616161</color>
+    <color name="colorInfoIcon">#616161</color>
     <color name="colorWarningInfoText">@android:color/holo_red_light</color>
     <color name="colorWarningInfoIcon">@android:color/holo_red_light</color>
-    <color name="colorIndicator">@android:color/white</color>
-    <color name="colorIndicatorLow">#8BC34A</color>
-    <color name="colorIndicatorMedium">#FFEB3B</color>
-    <color name="colorIndicatorHigh">#f44336</color>
+    <color name="colorIndicator">#616161</color>
+    <color name="colorIndicatorLow">#616161</color>
+    <color name="colorIndicatorMedium">#616161</color>
+    <color name="colorIndicatorHigh">#616161</color>
 </resources>
