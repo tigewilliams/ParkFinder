@@ -55,9 +55,9 @@
 
     <style name="ParkNavButtonStyle">
         <item name="android:background">@drawable/button_circle</item>
-        <item name="android:layout_width">32dp</item>
-        <item name="android:layout_height">32dp</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">@dimen/parkview_nav_button_size</item>
+        <item name="android:layout_height">@dimen/parkview_nav_button_size</item>
+        <item name="android:padding">@dimen/parkview_nav_button_padding</item>
         <item name="android:src">@drawable/ic_navigation_24dp</item>
     </style>
 
