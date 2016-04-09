@@ -13,9 +13,11 @@
     <dimen name="info_item_icon_size">18dp</dimen>
 
     <dimen name="park_card_margin">1dp</dimen>
-    <dimen name="park_card_height">84dp</dimen>
+    <dimen name="park_card_height">70dp</dimen>
     <dimen name="park_card_padding">10dp</dimen>
-    <dimen name="park_card_image_size">64dp</dimen>
+    <dimen name="park_card_image_size">70dp</dimen>
 
-    <dimen name="occupancy_bar_width">15dp</dimen>
+    <dimen name="occupancy_container_width">12dp</dimen>
+    <dimen name="occupancy_bar_width">12dp</dimen>
+    <dimen name="occupancy_icon_size">12dp</dimen>
 </resources>

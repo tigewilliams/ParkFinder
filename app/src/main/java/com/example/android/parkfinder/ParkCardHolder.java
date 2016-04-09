@@ -1,23 +1,17 @@
 package com.example.android.parkfinder;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -25,6 +19,14 @@ import java.util.List;
  * View Holder class for a Park's CardView
  */
 public class ParkCardHolder extends RecyclerView.ViewHolder {
+    private final float occupancyIconHolderHigh = 3.0f;
+    private final float occupancyIconHolderMedium = 5.0f;
+    private final float occupancyIconHolderLow = 5.0f;
+
+    private final float occupancyBarHigh = 8.0f;
+    private final float occupancyBarMedium = 4.0f;
+    private final float occupancyBarLow = 1.0f;
+
     private Park park;
     private ImageView parkImage;
     private TextView parkName;
@@ -41,19 +43,19 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
     }
 
     /**
+     * Gets the Park associated with the ParkCardHolder
+     */
+    public Park getPark() {
+        return park;
+    }
+
+    /**
      * Sets the Park for the ParkCardHolder
      */
     public void setPark(Park newPark) {
         park = newPark;
 
         updateParkViews();
-    }
-
-    /**
-     * Gets the Park associated with the ParkCardHolder
-     */
-    public Park getPark() {
-        return park;
     }
 
     private void setOnClickHandler(View view) {
@@ -200,7 +202,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, // width
                 0, // height
-                1.0f); // weight
+                occupancyIconHolderHigh); // weight
         return params;
     }
 
@@ -208,7 +210,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, // width
                 0, // height
-                1.0f); // weight
+                occupancyIconHolderMedium); // weight
         return params;
     }
 
@@ -216,7 +218,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, // width
                 0, // height
-                2.0f); // weight
+                occupancyIconHolderLow); // weight
         return params;
     }
 
@@ -224,7 +226,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 getOccupancyBarWidth(), // width
                 0, // height
-                2.0f); // weight
+                occupancyBarHigh); // weight
         params.gravity = Gravity.CENTER_HORIZONTAL;
         return params;
     }
@@ -233,7 +235,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 getOccupancyBarWidth(), // width
                 0, // height
-                1.0f); // weight
+                occupancyBarMedium); // weight
         params.gravity = Gravity.CENTER_HORIZONTAL;
         return params;
     }
@@ -242,7 +244,7 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 getOccupancyBarWidth(), // width
                 0, // height
-                1.0f); // weight
+                occupancyBarLow); // weight
         params.gravity = Gravity.CENTER_HORIZONTAL;
         return params;
     }

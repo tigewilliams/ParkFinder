@@ -83,28 +83,31 @@
         <item name="android:layout_width">@dimen/park_card_image_size</item>
         <item name="android:layout_height">@dimen/park_card_image_size</item>
         <item name="android:scaleType">centerCrop</item>
-        <item name="android:layout_margin">@dimen/park_card_padding</item>
     </style>
 
     <style name="ParkCardNameStyle">
         <item name="android:textColor">@color/colorText</item>
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textStyle">normal</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="ParkCardPopulationStyle">
-        <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
+    <style name="ParkCardOccupancyContainer">
+        <item name="android:layout_marginTop">@dimen/park_card_padding</item>
+        <item name="android:layout_marginBottom">@dimen/park_card_padding</item>
+        <item name="android:layout_marginRight">@dimen/park_card_padding</item>
     </style>
 
-    <style name="ParkCardPopulateIndicatorStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
+    <style name="ParkCardOccupancyIconStyle">
+        <item name="android:layout_width">@dimen/occupancy_icon_size</item>
+        <item name="android:layout_height">@dimen/occupancy_icon_size</item>
+    </style>
+
+    <style name="ParkCardOccupancyIndicatorStyle">
+        <item name="android:layout_width">@dimen/occupancy_bar_width</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
 </resources>
