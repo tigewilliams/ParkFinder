@@ -11,44 +11,76 @@
 
     <!-- South Rose Hill Park -->
     <string name="name_south_rose_hill_park">South Rose Hill Park</string>
-    <string name="description_south_rose_hill_park">Description of South Rose Hill Park</string>
+    <string name="description_south_rose_hill_park">
+        This small neighborhood park has up to date equipment and plenty of shade.
+        Parking spots are limited, so plan on parking in on a nearby street and walking.
+        There is a single swing set with two swings for adults, and two for small children.
+        A small playground area contains a fun obstacle course and a well kept play set.
+        A basketball court and a small public restroom round out this secluded park.
+        \n\n
+        Typically, there are only a few people at the park at any time which lends itself to
+        relaxed play time for small children.
+    </string>
     <string name="latitude_south_rose_hill_park">47.6688893</string>
     <string name="longitude_south_rose_hill_park">-122.169511</string>
-    <string name="hours_south_rose_hill_park">Open from 8:00 am until dusk.</string>
+    <string name="hours_south_rose_hill_park">Open from 8:00 am until dusk</string>
     <string name="amenities_south_rose_hill_park">Public Restrooms</string>
     <string name="equip_south_rose_hill_park">Suitable for small children and toddlers</string>
-    <string name="warning_south_rose_hill_park">BEARS!</string>
+    <string name="warning_south_rose_hill_park">Has an exit close to a street</string>
     <string name="population_south_rose_hill_park">LOW</string>
     <string name="rating_south_rose_hill_park">4.5</string>
 
     <!-- North Rose Hill Park -->
-    <string name="name_north_rose_hill_park">North Rose Hill Park</string>
-    <string name="description_north_rose_hill_park">Description of North Rose Hill Park</string>
-    <string name="latitude_north_rose_hill_park">47.6688893</string>
-    <string name="longitude_north_rose_hill_park">-122.169511</string>
+    <string name="name_north_rose_hill_park">North Rose Hill Woodlands Park</string>
+    <string name="description_north_rose_hill_park">
+        North Rose Hill Woodlands Park, or Castle Park as it is also known, has a wonderful play
+        area with a large castle like play set.  The rest of the park is open with a wooden
+        walkway that winds through a wooded area.
+        \n\n
+        Parking is very limited for a park of this size, and the entrances are somewhat hidden
+        if you are not familiar with the area.
+    </string>
+    <string name="latitude_north_rose_hill_park">47.687323</string>
+    <string name="longitude_north_rose_hill_park">-122.175218</string>
     <string name="hours_north_rose_hill_park">Open from 8:00 am until dusk.</string>
-    <string name="amenities_north_rose_hill_park">Public Restrooms</string>
     <string name="equip_north_rose_hill_park">Suitable for small children and toddlers</string>
     <string name="population_north_rose_hill_park">MEDIUM</string>
     <string name="rating_north_rose_hill_park">5</string>
 
     <!-- Peter Kirk Park -->
     <string name="name_peter_kirk_park">Peter Kirk Park</string>
-    <string name="description_peter_kirk_park">Description of Peter Kirk Park</string>
-    <string name="latitude_peter_kirk_park">47.6688893</string>
-    <string name="longitude_peter_kirk_park">-122.169511</string>
+    <string name="description_peter_kirk_park">
+        Located near downtown Kirkland, this vibrant park is almost always teaming with people.
+        The play area, a skate park, tennis courts, a baseball diamond, public
+        swimming pool, and central location ensure that there will almost always be something
+        to do.
+        \n\n
+        Plenty of open space means that there is not much escape from the sun on hotter days.
+        Fortunately, the Kirkland Library is adjacent to the park and offers a nice escape from
+        the heat.  Many local shops and restaurants are also within walking distance.
+    </string>
+    <string name="latitude_peter_kirk_park">47.677058</string>
+    <string name="longitude_peter_kirk_park">-122.202202</string>
     <string name="hours_peter_kirk_park">Open from 8:00 am until dusk.</string>
     <string name="amenities_peter_kirk_park">Public Restrooms</string>
     <string name="equip_peter_kirk_park">Public pool, skate park, and baseball field</string>
-    <string name="warning_peter_kirk_park">Watch out for fly balls</string>
+    <string name="warning_peter_kirk_park">No fencing near busy roads</string>
     <string name="population_peter_kirk_park">MEDIUM</string>
     <string name="rating_peter_kirk_park">3</string>
 
     <!-- Terrace Park -->
     <string name="name_terrace_park">Terrace Park</string>
-    <string name="description_terrace_park">Description of Terrace Park</string>
-    <string name="latitude_terrace_park">47.6688893</string>
-    <string name="longitude_terrace_park">-122.169511</string>
+    <string name="description_terrace_park">
+        Terrace Park is a small, out of the way neighborhood park.  While its play area is
+        relatively small, the generally attendance makes it feel like you have your own private
+        park.
+        \n\n
+        There is swing set and small play set for young children, and a basketball court.
+        The Cross Kirkland Corridor winds nearby, and a large open field is nice for running
+        and playing with the kids.
+    </string>
+    <string name="latitude_terrace_park">47.664979</string>
+    <string name="longitude_terrace_park">-122.200847</string>
     <string name="hours_terrace_park">Open from 8:00 am until dusk.</string>
     <string name="equip_terrace_park">Swingset and small playset</string>
     <string name="population_terrace_park">LOW</string>
@@ -56,12 +88,21 @@
 
     <!-- Grass Lawn Park -->
     <string name="name_grass_lawn_park">Grass Lawn Park</string>
-    <string name="description_grass_lawn_park">Description of Grass Lawn Park</string>
-    <string name="latitude_grass_lawn_park">47.6688893</string>
-    <string name="longitude_grass_lawn_park">-122.169511</string>
+    <string name="description_grass_lawn_park">
+        Located close to the Microsoft campus in Redmond, Grass Lawn Park is an vast, and
+        busy park.  It boasts multiple sporting areas (tennis courts, soccer fields,
+        baseball diamond, and basketball courts), a large open area with a pavilion for group
+        events, paved walkways, and two playgrounds.
+        \n\n
+        With all of the amenities and its convenient location, Grass Lawn Park can be extremely
+        crowded at times.  While there are two parking lots, they tend to fill up quickly so get
+        there early or be prepared to park in a nearby neighborhood and walk.
+    </string>
+    <string name="latitude_grass_lawn_park">47.6692766</string>
+    <string name="longitude_grass_lawn_park">-122.1436547</string>
     <string name="hours_grass_lawn_park">Open from 8:00 am until dusk.</string>
     <string name="amenities_grass_lawn_park">Public Restrooms</string>
-    <string name="equip_grass_lawn_park">Multiple playgrounds, soccer fields, baseball field</string>
+    <string name="equip_grass_lawn_park">Multiple playgrounds and sporting areas</string>
     <string name="warning_grass_lawn_park">Can be extremely crowded at times</string>
     <string name="population_grass_lawn_park">HIGH</string>
     <string name="rating_grass_lawn_park">4</string>
