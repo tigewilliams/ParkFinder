@@ -3,14 +3,18 @@ package com.example.android.parkfinder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -26,30 +30,33 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
     private TextView parkName;
     private LinearLayout parkFeatures;
     private RatingBar parkRating;
-    private ImageView parkPopulationLow;
-    private ImageView parkPopulationMedium;
-    private ImageView parkPopulationHigh;
+    private RelativeLayout parkOccupancyIconHolder;
+    private View parkOccupancyBar;
 
-    public ParkCardHolder(View view){
+    public ParkCardHolder(View view) {
         super(view);
 
         setOnClickHandler(view);
         setChildViews(view);
     }
 
-    /** Sets the Park for the ParkCardHolder */
+    /**
+     * Sets the Park for the ParkCardHolder
+     */
     public void setPark(Park newPark) {
         park = newPark;
 
         updateParkViews();
     }
 
-    /** Gets the Park associated with the ParkCardHolder */
+    /**
+     * Gets the Park associated with the ParkCardHolder
+     */
     public Park getPark() {
         return park;
     }
 
-    private void setOnClickHandler(View view){
+    private void setOnClickHandler(View view) {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,17 +74,16 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
         view.setOnClickListener(listener);
     }
 
-    private void setChildViews(View view){
+    private void setChildViews(View view) {
         parkImage = (ImageView) view.findViewById(R.id.parkCardImage);
         parkName = (TextView) view.findViewById(R.id.parkCardName);
         parkFeatures = (LinearLayout) view.findViewById(R.id.parkCardFeatures);
         parkRating = (RatingBar) view.findViewById(R.id.parkCardRating);
-        parkPopulationLow = (ImageView) view.findViewById(R.id.parkCardPopLow);
-        parkPopulationMedium = (ImageView) view.findViewById(R.id.parkCardPopMedium);
-        parkPopulationHigh = (ImageView) view.findViewById(R.id.parkCardPopHigh);
+        parkOccupancyIconHolder = (RelativeLayout) view.findViewById(R.id.parkCardOccupancyIconHolder);
+        parkOccupancyBar = view.findViewById(R.id.parkCardOccupancyBar);
     }
 
-    private void updateParkViews(){
+    private void updateParkViews() {
         // TODO: define a "primary" image instead of just taking the first one.
         parkImage.setImageResource(park.getImageResources().get(0));
         parkName.setText(park.getName());
@@ -121,35 +127,129 @@ public class ParkCardHolder extends RecyclerView.ViewHolder {
     }
 
     private void setParkPopulation(PopulationLevels population) {
-        Drawable indicatorOn = getResourceImage(R.drawable.ic_indicator_filled_18dp);
-        Drawable indicatorOff = getResourceImage(R.drawable.ic_indicator_empty_18dp);
-
         switch (population) {
             case HIGH:
-                parkPopulationHigh.setImageDrawable(indicatorOn);
-                parkPopulationMedium.setImageDrawable(indicatorOn);
-                parkPopulationLow.setImageDrawable(indicatorOn);
+                setOccupancyIconHolderHigh();
+                setOccupancyBarHigh();
                 return;
 
             case MEDIUM:
-                parkPopulationHigh.setImageDrawable(indicatorOff);
-                parkPopulationMedium.setImageDrawable(indicatorOn);
-                parkPopulationLow.setImageDrawable(indicatorOn);
+                setOccupancyIconHolderMedium();
+                setOccupancyBarMedium();
                 return;
 
             case LOW:
-                parkPopulationHigh.setImageDrawable(indicatorOff);
-                parkPopulationMedium.setImageDrawable(indicatorOff);
-                parkPopulationLow.setImageDrawable(indicatorOn);
+                setOccupancyIconHolderLow();
+                setOccupancyBarLow();
                 return;
 
             default:
                 // We shouldn't get to this case, but just turn them all
-                // off just in case we do.
-                parkPopulationHigh.setImageDrawable(indicatorOff);
-                parkPopulationMedium.setImageDrawable(indicatorOff);
-                parkPopulationLow.setImageDrawable(indicatorOff);
+                // off just in case we do.  Defaulting it to "High" mode.
+                setOccupancyIconHolderHigh();
+                setOccupancyBarHigh();
         }
+    }
+
+    private void setOccupancyIconHolderHigh() {
+        LinearLayout.LayoutParams params = getOccupancyIconHolderHighParams();
+        parkOccupancyIconHolder.setLayoutParams(params);
+    }
+
+    private void setOccupancyIconHolderMedium() {
+        LinearLayout.LayoutParams params = getOccupancyIconHolderMediumParams();
+        parkOccupancyIconHolder.setLayoutParams(params);
+    }
+
+    private void setOccupancyIconHolderLow() {
+        LinearLayout.LayoutParams params = getOccupancyIconHolderLowParams();
+        parkOccupancyIconHolder.setLayoutParams(params);
+    }
+
+    private void setOccupancyBarHigh() {
+        LinearLayout.LayoutParams params = getOccupancyBarHighParams();
+        parkOccupancyBar.setLayoutParams(params);
+
+        int backGroundColor = ContextCompat.getColor(parkOccupancyBar.getContext(),
+                R.color.colorIndicatorHigh);
+
+        parkOccupancyBar.setBackgroundColor(backGroundColor);
+    }
+
+    private void setOccupancyBarMedium() {
+        LinearLayout.LayoutParams params = getOccupancyBarMediumParams();
+        parkOccupancyBar.setLayoutParams(params);
+
+        int backGroundColor = ContextCompat.getColor(parkOccupancyBar.getContext(),
+                R.color.colorIndicatorMedium);
+
+        parkOccupancyBar.setBackgroundColor(backGroundColor);
+    }
+
+    private void setOccupancyBarLow() {
+        LinearLayout.LayoutParams params = getOccupancyBarLowParams();
+        parkOccupancyBar.setLayoutParams(params);
+
+        int backGroundColor = ContextCompat.getColor(parkOccupancyBar.getContext(),
+                R.color.colorIndicatorLow);
+
+        parkOccupancyBar.setBackgroundColor(backGroundColor);
+    }
+
+    private LinearLayout.LayoutParams getOccupancyIconHolderHighParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, // width
+                0, // height
+                1.0f); // weight
+        return params;
+    }
+
+    private LinearLayout.LayoutParams getOccupancyIconHolderMediumParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, // width
+                0, // height
+                1.0f); // weight
+        return params;
+    }
+
+    private LinearLayout.LayoutParams getOccupancyIconHolderLowParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, // width
+                0, // height
+                2.0f); // weight
+        return params;
+    }
+
+    private LinearLayout.LayoutParams getOccupancyBarHighParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                getOccupancyBarWidth(), // width
+                0, // height
+                2.0f); // weight
+        params.gravity = Gravity.CENTER_HORIZONTAL;
+        return params;
+    }
+
+    private LinearLayout.LayoutParams getOccupancyBarMediumParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                getOccupancyBarWidth(), // width
+                0, // height
+                1.0f); // weight
+        params.gravity = Gravity.CENTER_HORIZONTAL;
+        return params;
+    }
+
+    private LinearLayout.LayoutParams getOccupancyBarLowParams() {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                getOccupancyBarWidth(), // width
+                0, // height
+                1.0f); // weight
+        params.gravity = Gravity.CENTER_HORIZONTAL;
+        return params;
+    }
+
+    int getOccupancyBarWidth() {
+        return (int) parkOccupancyBar.getResources()
+                .getDimension(R.dimen.occupancy_bar_width);
     }
 
     private Drawable getResourceImage(int id) {

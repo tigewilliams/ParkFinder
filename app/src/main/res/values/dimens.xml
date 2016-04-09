@@ -4,10 +4,10 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="divider_horizontal_margin">10dp</dimen>
-    <dimen name="divider_vertical_margin">5dp</dimen>
+    <dimen name="divider_vertical_margin">10dp</dimen>
 
-    <dimen name="card_horizontal_margin">5dp</dimen>
-    <dimen name="card_vertical_margin">5dp</dimen>
+    <dimen name="parkview_horizontal_Margin">10dp</dimen>
+    <dimen name="parkview_vertical_margin">5dp</dimen>
 
     <dimen name="info_item_margin">3dp</dimen>
     <dimen name="info_item_icon_size">18dp</dimen>
@@ -16,4 +16,6 @@
     <dimen name="park_card_height">84dp</dimen>
     <dimen name="park_card_padding">10dp</dimen>
     <dimen name="park_card_image_size">64dp</dimen>
+
+    <dimen name="occupancy_bar_width">15dp</dimen>
 </resources>

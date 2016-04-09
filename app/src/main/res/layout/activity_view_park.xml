@@ -12,30 +12,31 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/colorCardBackground"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/card_vertical_margin">
+                tools:background="@android:color/holo_blue_light">
 
                 <!-- The main picture of the park -->
                 <ImageView
                     android:id="@+id/parkImage"
                     style="@style/ParkImageStyle"
-                    android:layout_marginBottom="@dimen/card_vertical_margin"
                     tools:src="@drawable/south_rose_hill_3" />
 
                 <!-- Info list -->
                 <LinearLayout
                     android:id="@+id/infoList"
+                    style="@style/ParkInfoListStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/parkImage"
-                    android:layout_margin="@dimen/card_vertical_margin"
-                    android:orientation="vertical" />
+                    android:orientation="vertical"
+                    tools:background="@android:color/holo_red_light"
+                    tools:layout_height="50dp" />
 
                 <!-- The Navigate To button -->
                 <ImageButton

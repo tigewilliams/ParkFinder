@@ -19,8 +19,9 @@
     <color name="colorInfoIcon">#616161</color>
     <color name="colorWarningInfoText">@android:color/holo_red_light</color>
     <color name="colorWarningInfoIcon">@android:color/holo_red_light</color>
+
     <color name="colorIndicator">#616161</color>
-    <color name="colorIndicatorLow">#616161</color>
-    <color name="colorIndicatorMedium">#616161</color>
-    <color name="colorIndicatorHigh">#616161</color>
+    <color name="colorIndicatorLow">#4CAF50</color>
+    <color name="colorIndicatorMedium">#FDD835</color>
+    <color name="colorIndicatorHigh">#f44336</color>
 </resources>

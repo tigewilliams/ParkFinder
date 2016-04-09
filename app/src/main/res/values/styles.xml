@@ -23,6 +23,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">200dp</item>
         <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginBottom">@dimen/parkview_vertical_margin</item>
     </style>
 
     <style name="ParkNameStyle">
@@ -34,16 +35,20 @@
         <item name="android:textColor">@color/colorText</item>
     </style>
 
+    <style name="ParkInfoListStyle">
+        <item name="android:layout_marginLeft">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginRight">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginTop">@dimen/parkview_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/parkview_vertical_margin</item>
+    </style>
+
     <style name="ParkDescriptionStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/card_horizontal_margin</item>
-        <item name="android:layout_marginRight">@dimen/card_horizontal_margin</item>
-        <item name="android:layout_marginBottom">@dimen/card_vertical_margin</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:paddingLeft">5dp</item>
-        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_marginLeft">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginRight">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginTop">@dimen/parkview_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/parkview_vertical_margin</item>
         <item name="android:background">@color/colorTextAreaBackground</item>
         <item name="android:textColor">@color/colorTextArea</item>
     </style>
@@ -58,7 +63,10 @@
 
     <style name="ParkMapStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_margin">@dimen/card_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginRight">@dimen/parkview_horizontal_Margin</item>
+        <item name="android:layout_marginTop">@dimen/parkview_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/parkview_vertical_margin</item>
         <item name="android:layout_height">200dp</item>
     </style>
 
@@ -75,7 +83,7 @@
         <item name="android:layout_width">@dimen/park_card_image_size</item>
         <item name="android:layout_height">@dimen/park_card_image_size</item>
         <item name="android:scaleType">centerCrop</item>
-        <item name="android:layout_marginRight">@dimen/park_card_padding</item>
+        <item name="android:layout_margin">@dimen/park_card_padding</item>
     </style>
 
     <style name="ParkCardNameStyle">
