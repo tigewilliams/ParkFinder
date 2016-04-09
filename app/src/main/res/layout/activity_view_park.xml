@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.parkfinder.ViewParkActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorCardBackground"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_vertical_margin">
+
+                <!-- The main picture of the park -->
+                <ImageView
+                    android:id="@+id/parkImage"
+                    style="@style/ParkImageStyle"
+                    android:layout_marginBottom="@dimen/card_vertical_margin"
+                    tools:src="@drawable/south_rose_hill_kirkland_1" />
+
+                <!-- Info list -->
+                <LinearLayout
+                    android:id="@+id/infoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/parkImage"
+                    android:layout_margin="@dimen/card_vertical_margin"
+                    android:orientation="vertical" />
+
+                <!-- The Navigate To button -->
+                <ImageButton
+                    android:id="@+id/navToParkButton"
+                    style="@style/ParkNavButtonStyle"
+                    android:layout_above="@id/infoList"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-11dp"
+                    android:layout_marginRight="13dp"
+                    android:onClick="navigateToPark" />
+
+            </RelativeLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/parkDescription"
+                style="@style/ParkDescriptionStyle"
+                tools:text="This is a description of the park and what all it has in it and is a really long text line !" />
+
+            <!-- Map View -->
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                style="@style/ParkMapStyle" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

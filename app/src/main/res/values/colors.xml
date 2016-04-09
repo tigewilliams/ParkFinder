@@ -10,6 +10,15 @@
     <color name="colorButtonPrimaryFocused">#F06292</color>
     <color name="colorButtonPrimaryClicked">#F06292</color>
 
+    <color name="colorText">@android:color/white</color>
+    <color name="colorTextArea">@android:color/black</color>
+    <color name="colorTextAreaBackground">@android:color/white</color>
+    <color name="colorInfoText">@android:color/white</color>
     <color name="colorInfoIcon">@android:color/white</color>
+    <color name="colorWarningInfoText">@android:color/holo_red_light</color>
     <color name="colorWarningInfoIcon">@android:color/holo_red_light</color>
+    <color name="colorIndicator">@android:color/white</color>
+    <color name="colorIndicatorLow">#8BC34A</color>
+    <color name="colorIndicatorMedium">#FFEB3B</color>
+    <color name="colorIndicatorHigh">#f44336</color>
 </resources>

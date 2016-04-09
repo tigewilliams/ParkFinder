@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParkCardStyle"
+    tools:context="com.example.android.parkfinder.ViewParkActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/park_card_height"
+        android:padding="@dimen/park_card_padding"
+        android:background="@color/colorCardBackground">
+
+        <ImageView
+            android:id="@+id/parkCardImage"
+            style="@style/ParkCardImageStyle"
+            tools:src="@drawable/south_rose_hill_kirkland_1" />
+
+        <TextView
+            android:id="@+id/parkCardName"
+            style="@style/ParkCardNameStyle"
+            android:layout_toRightOf="@id/parkCardImage"
+            android:layout_alignTop="@id/parkCardImage"
+            tools:text="South Rose Hill Park" />
+
+        <LinearLayout
+            android:id="@+id/parkCardFeatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parkCardName"
+            android:layout_alignLeft="@id/parkCardName"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parkCardRating"
+            android:layout_below="@+id/parkCardFeatures"
+            android:layout_alignStart="@+id/parkCardFeatures"
+            android:numStars="5"
+            tools:rating="4.1"
+            style="@android:style/Widget.Material.RatingBar.Small" />
+
+        <LinearLayout
+            android:id="@+id/parkCardPopulation"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            style="@style/ParkCardPopulationStyle">
+
+            <ImageView
+                android:id="@+id/parkCardPopHigh"
+                style="@style/ParkCardPopulateIndicatorStyle"
+                tools:src="@drawable/ic_indicator_empty_18dp"/>
+            <ImageView
+                android:id="@+id/parkCardPopMedium"
+                style="@style/ParkCardPopulateIndicatorStyle"
+                tools:src="@drawable/ic_indicator_filled_18dp"/>
+            <ImageView
+                android:id="@+id/parkCardPopLow"
+                style="@style/ParkCardPopulateIndicatorStyle"
+                tools:src="@drawable/ic_indicator_filled_18dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/info_item_margin"
+    android:orientation="horizontal"
+    tools:context="com.example.android.parkfinder.ViewParkActivity">
+
+    <ImageView
+        android:id="@+id/infoItemIcon"
+        android:layout_width="@dimen/info_item_icon_size"
+        android:layout_height="@dimen/info_item_icon_size"
+        tools:src="@drawable/ic_hours_18dp" />
+
+    <TextView
+        android:id="@+id/infoItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/info_item_margin"
+        android:textColor="@color/colorInfoText"
+        tools:text="Open from 8:00 AM to Dusk" />
+
+</LinearLayout>

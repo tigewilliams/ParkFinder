@@ -18,6 +18,8 @@
     <string name="amenities_south_rose_hill_park">Public Restrooms</string>
     <string name="equip_south_rose_hill_park">Suitable for small children and toddlers</string>
     <string name="warning_south_rose_hill_park">BEARS!</string>
+    <string name="population_south_rose_hill_park">LOW</string>
+    <string name="rating_south_rose_hill_park">4.5</string>
 
     <!-- North Rose Hill Park -->
     <string name="name_north_rose_hill_park">North Rose Hill Park</string>
@@ -27,6 +29,8 @@
     <string name="hours_north_rose_hill_park">Open from 8:00 am until dusk.</string>
     <string name="amenities_north_rose_hill_park">Public Restrooms</string>
     <string name="equip_north_rose_hill_park">Suitable for small children and toddlers</string>
+    <string name="population_north_rose_hill_park">MEDIUM</string>
+    <string name="rating_north_rose_hill_park">5</string>
 
     <!-- Peter Kirk Park -->
     <string name="name_peter_kirk_park">Peter Kirk Park</string>
@@ -37,6 +41,8 @@
     <string name="amenities_peter_kirk_park">Public Restrooms</string>
     <string name="equip_peter_kirk_park">Public pool, skate park, and baseball field</string>
     <string name="warning_peter_kirk_park">Watch out for fly balls</string>
+    <string name="population_peter_kirk_park">MEDIUM</string>
+    <string name="rating_peter_kirk_park">3</string>
 
     <!-- Terrace Park -->
     <string name="name_terrace_park">Terrace Park</string>
@@ -45,6 +51,8 @@
     <string name="longitude_terrace_park">-122.169511</string>
     <string name="hours_terrace_park">Open from 8:00 am until dusk.</string>
     <string name="equip_terrace_park">Swingset and small playset</string>
+    <string name="population_terrace_park">LOW</string>
+    <string name="rating_terrace_park">2</string>
 
     <!-- Grass Lawn Park -->
     <string name="name_grass_lawn_park">Grass Lawn Park</string>
@@ -55,5 +63,7 @@
     <string name="amenities_grass_lawn_park">Public Restrooms</string>
     <string name="equip_grass_lawn_park">Multiple playgrounds, soccer fields, baseball field</string>
     <string name="warning_grass_lawn_park">Can be extremely crowded at times</string>
+    <string name="population_grass_lawn_park">HIGH</string>
+    <string name="rating_grass_lawn_park">4</string>
 
 </resources>

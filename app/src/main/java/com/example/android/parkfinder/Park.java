@@ -34,6 +34,8 @@ public class Park implements Parcelable {
     private String name;
     private String description;
     private LatLng location;
+    private float rating;
+    private PopulationLevels populationLevel;
     private ArrayList<Integer> imageResources = new ArrayList<Integer>();
     private ArrayList<InfoItem> infoItems = new ArrayList<InfoItem>();
 
@@ -107,6 +109,34 @@ public class Park implements Parcelable {
      */
     public void setDescription(String newDescription) {
         description = newDescription;
+    }
+
+    /**
+     * Sets the rating for the park
+     */
+    public void setRating(float newRating) {
+        rating = newRating;
+    }
+
+    /**
+     * Returns the rating of the park
+     */
+    public float getRating() {
+        return rating;
+    }
+
+    /**
+     * Sets the population level for the park
+     */
+    public void setPopulationLevel(PopulationLevels newPopulationLevel) {
+        populationLevel = newPopulationLevel;
+    }
+
+    /**
+     * Returns the population level of the park
+     */
+    public PopulationLevels getPopulationLevel() {
+        return populationLevel;
     }
 
     /**

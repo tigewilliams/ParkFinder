@@ -1,25 +1,41 @@
 package com.example.android.parkfinder;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private Park park;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ParkRetriever parkRetriever = new ParkRetriever(this);
-        park = parkRetriever.getSouthRoseHillPark();
+        setupRecylerView();
+        populateParks();
     }
 
-    public void viewPark(View view) {
-        Intent intent = new Intent(this, ViewParkActivity.class);
-        intent.putExtra(IntentExtras.EXTRA_PARK, park);
-        startActivity(intent);
+    private void setupRecylerView() {
+        recyclerView = (RecyclerView) findViewById(R.id.mainRecycler);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        RecyclerView.LayoutManager recyclerLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(recyclerLayoutManager);
+    }
+    private void populateParks() {
+        ParkRetriever parkRetriever = new ParkRetriever(this);
+        List<Park> parks = parkRetriever.getAllParks();
+
+        CardRecylerAdapter adapter = new CardRecylerAdapter(parks);
+        recyclerView.setAdapter(adapter);
     }
 }

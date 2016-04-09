@@ -5,4 +5,12 @@
 
     <dimen name="card_horizontal_margin">5dp</dimen>
     <dimen name="card_vertical_margin">5dp</dimen>
+
+    <dimen name="info_item_margin">3dp</dimen>
+    <dimen name="info_item_icon_size">18dp</dimen>
+
+    <dimen name="park_card_margin">2dp</dimen>
+    <dimen name="park_card_height">84dp</dimen>
+    <dimen name="park_card_padding">10dp</dimen>
+    <dimen name="park_card_image_size">64dp</dimen>
 </resources>

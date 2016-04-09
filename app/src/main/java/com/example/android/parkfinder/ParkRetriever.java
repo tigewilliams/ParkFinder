@@ -4,6 +4,9 @@ import android.content.Context;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This returns Park objects.  In the future, it would
  * get these from a database of some sort.
@@ -18,6 +21,14 @@ public class ParkRetriever {
      */
     public ParkRetriever(Context context) {
         this.context = context;
+    }
+
+    /** Returns all of the Parks */
+    public List<Park> getAllParks() {
+        ArrayList<Park> parks = new ArrayList<Park>();
+        parks.add(getSouthRoseHillPark());
+        parks.add(getNorthRoseHillPark());
+        return parks;
     }
 
     /**
@@ -47,6 +58,15 @@ public class ParkRetriever {
 
         String equipment = getResourceString(R.string.equip_south_rose_hill_park);
         park.addInfoItem(new InfoItem(InfoTypes.EQUIPMENT, equipment));
+
+        String warning = getResourceString(R.string.warning_south_rose_hill_park);
+        park.addInfoItem(new InfoItem(InfoTypes.WARNING, warning));
+
+        String rating = getResourceString(R.string.rating_south_rose_hill_park);
+        park.setRating(Float.parseFloat(rating));
+
+        String population = getResourceString(R.string.population_south_rose_hill_park);
+        park.setPopulationLevel(PopulationLevels.valueOf(population));
 
         return park;
     }
@@ -79,6 +99,12 @@ public class ParkRetriever {
 
         String equipment = getResourceString(R.string.equip_north_rose_hill_park);
         park.addInfoItem(new InfoItem(InfoTypes.EQUIPMENT, equipment));
+
+        String rating = getResourceString(R.string.rating_north_rose_hill_park);
+        park.setRating(Float.parseFloat(rating));
+
+        String population = getResourceString(R.string.population_north_rose_hill_park);
+        park.setPopulationLevel(PopulationLevels.valueOf(population));
 
         return park;
     }

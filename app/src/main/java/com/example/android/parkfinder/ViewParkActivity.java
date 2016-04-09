@@ -3,9 +3,15 @@ package com.example.android.parkfinder;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -16,6 +22,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.List;
 
 public class ViewParkActivity extends AppCompatActivity
         implements OnMapReadyCallback {
@@ -70,7 +78,41 @@ public class ViewParkActivity extends AppCompatActivity
     }
 
     private void setParkInfoItems(Park park) {
+        List<InfoItem> items = park.getInfoItems();
+        LayoutInflater inflater = LayoutInflater.from(this);
+        LinearLayout infoList = (LinearLayout) findViewById(R.id.infoList);
 
+        // first, clear out any existing views in the layout
+        // so that we don't duplicate things
+        clearInfoItemsList(infoList);
+
+        int itemCount = items.size();
+        for (int i=0; i<itemCount; i++){
+            InfoItem item = items.get(i);
+            setParkInfoItem(item, infoList, inflater);
+        }
+    }
+    private void clearInfoItemsList(LinearLayout infoItemsList){
+        if(infoItemsList.getChildCount() > 0)
+            infoItemsList.removeAllViews();
+    }
+    private void setParkInfoItem(InfoItem item, LinearLayout infoList, LayoutInflater inflater){
+        View itemView = inflater.inflate(R.layout.infoitem, infoList, false);
+        updateInfoItemView(item, itemView);
+        infoList.addView(itemView);
+    }
+    private void updateInfoItemView(InfoItem item, View itemView){
+        // Wire up the itemView to the properties of the InfoItem
+        ImageView iconView = (ImageView)itemView.findViewById(R.id.infoItemIcon);
+        TextView textView = (TextView)itemView.findViewById(R.id.infoItemDescription);
+        iconView.setImageResource(item.getInfoType().getIconResource());
+        textView.setText(item.getDescription());
+
+        // If this is a warning, make the text the warning color.
+        if (item.getInfoType() == InfoTypes.WARNING) {
+            int warningColor = ContextCompat.getColor(this, R.color.colorWarningInfoText);
+            textView.setTextColor(warningColor);
+        }
     }
 
     private void setParkDescription(Park park) {
